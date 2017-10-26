@@ -1,0 +1,55 @@
+{
+  "name": "mass-version-updater",
+  "version": "1.0.0",
+  "description": "Multi technology versioning tool",
+  "main": "./src/MvuApp.js",
+  "bin": {
+    "mvu": "./src/MvuApp.js"
+  },
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ustream/mvu"
+  },
+  "scripts": {
+    "lint_and_test": "npm run lint && npm run test",
+    "lint_and_test_tc": "npm run lint && npm run test_tc",
+    "lint": "eslint 'src/**/*.js'",
+    "test": "mocha ./tests/**",
+    "test_coverage": "nyc --check-coverage --lines 50 --reporter=text mocha --reporter mocha-junit-reporter ./tests/**",
+    "test_tc": "nyc --check-coverage --lines 50 --reporter=teamcity mocha --reporter mocha-junit-reporter ./tests/**"
+  },
+  "author": "Csaba Makara",
+  "email" : "csaba.makara@hu.ibm.com",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.4.1",
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "csv": "^1.1.1",
+    "inquirer": "3.0.6",
+    "ora": "^1.2.0",
+    "path": "^0.12.7",
+    "sendgrid": "^5.1.1",
+    "simple-git": "1.72.0",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "3.4.2",
+    "mocha-junit-reporter": "^1.13.0",
+    "nyc": "^11.0.3",
+    "sinon": "^2.4.1",
+    "os-tmpdir": "1.0.2"
+  }
+}

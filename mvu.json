@@ -1,0 +1,15 @@
+{
+  "currentVersion": "0.11.16",
+  "createCommit": true,
+  "createTag": true,
+  "commitMessage": "Bump version: {currentVersion} → {newVersion}",
+  "tagPattern": "release-{newVersion}",
+  "technologies": {
+    "Npm": {
+      "configFiles": {
+        "package.json": "package.json",
+        "npm-shrinkwrap.json": "npm-shrinkwrap.json"
+      }
+    }
+  }
+}

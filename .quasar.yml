@@ -1,0 +1,14 @@
+buildrunner:
+  npm:
+    task: run lint_and_test_tc
+    test_outputs: 
+    - ./test-results.xml
+releaserunner:
+  npm:
+    task: publish
+environment_image: build-tools/ci-base-images/node-8:latest
+dependencies:
+  nvm: 7.6.0
+extensions:
+  brew_release:
+    app_name: mvu
